@@ -12,6 +12,8 @@ namespace William01.DOMINIO
         
         private String password;
 
+
+        private String hola;
         public string Usuario { get => usuario; set => usuario = value; }
         public string Password { get => password; set => password = value; }
     }
