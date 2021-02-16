@@ -9,6 +9,7 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using William01.DOMINIO;
 using William01.NEGOCIO;
+using William01.VISTA;
 
 namespace William01
 {
@@ -34,6 +35,9 @@ namespace William01
             {
 
                 MessageBox.Show("Welcome");
+                FrmMenu frm = new FrmMenu();
+                frm.Show();
+                this.Hide();
                 
             }
             else {

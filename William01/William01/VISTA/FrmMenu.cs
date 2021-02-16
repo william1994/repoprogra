@@ -21,5 +21,12 @@ namespace William01.VISTA
         {
 
         }
+
+        private void cLICKPARAMASIMFORMACIONToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            FrmAcercaDe frm = new FrmAcercaDe();
+            frm.MdiParent = this;
+            frm.Show();
+        }
     }
 }
