@@ -16,10 +16,10 @@ namespace William01.VISTA
         {
             InitializeComponent();
         }
-
+        public String usuarioEstado;
         private void FrmMenu_Load(object sender, EventArgs e)
         {
-
+            label1.Text = usuarioEstado;
         }
 
         private void cLICKPARAMASIMFORMACIONToolStripMenuItem_Click(object sender, EventArgs e)
@@ -27,6 +27,25 @@ namespace William01.VISTA
             FrmAcercaDe frm = new FrmAcercaDe();
             frm.MdiParent = this;
             frm.Show();
+        }
+
+        private void sumasToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            FrmOperaciones frmop = new FrmOperaciones();
+            frmop.MdiParent = this;
+            frmop.BtnResta.Enabled = false;
+
+            frmop.Show();
+
+        }
+
+        private void restasToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            FrmOperaciones frmop = new FrmOperaciones();
+            frmop.MdiParent = this;
+            frmop.BtnSuma.Enabled = false;
+
+            frmop.Show();
         }
     }
 }

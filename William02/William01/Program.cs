@@ -17,7 +17,7 @@ namespace William01
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new FrmVisuaUsuario());
+            Application.Run(new Form1());
         }
     }
 }

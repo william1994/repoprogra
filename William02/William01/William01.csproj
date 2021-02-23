@@ -69,6 +69,12 @@
     <Compile Include="VISTA\FrmMenu.Designer.cs">
       <DependentUpon>FrmMenu.cs</DependentUpon>
     </Compile>
+    <Compile Include="VISTA\FrmOperaciones.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="VISTA\FrmOperaciones.Designer.cs">
+      <DependentUpon>FrmOperaciones.cs</DependentUpon>
+    </Compile>
     <Compile Include="VISTA\FrmVisuaUsuario.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -92,6 +98,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="VISTA\FrmMenu.resx">
       <DependentUpon>FrmMenu.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="VISTA\FrmOperaciones.resx">
+      <DependentUpon>FrmOperaciones.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="VISTA\FrmVisuaUsuario.resx">
       <DependentUpon>FrmVisuaUsuario.cs</DependentUpon>

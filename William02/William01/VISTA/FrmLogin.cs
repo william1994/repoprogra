@@ -36,6 +36,7 @@ namespace William01
 
                 MessageBox.Show("Welcome");
                 FrmMenu frm = new FrmMenu();
+                frm.usuarioEstado = txtUser.Text;
                 frm.Show();
                 this.Hide();
                 

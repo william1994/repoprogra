@@ -9,6 +9,6 @@ namespace William01.DAO
     class ClsListaUsuario
     {
        public String[] user = new string[3] { "William", "Jenny", "Eli" };
-        public String[] pass = new string[3] { "12", "123", "1234" };
+       public String[] pass = new string[3] { "12", "123", "1234" };
     }
 }
