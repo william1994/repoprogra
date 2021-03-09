@@ -33,10 +33,12 @@ namespace William01.VISTA
             this.acercaDeToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.cLICKPARAMASIMFORMACIONToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.arreglosToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.label1 = new System.Windows.Forms.Label();
             this.mATETICASToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.sumasToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.restasToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.label1 = new System.Windows.Forms.Label();
+            this.cONEXIONESBDToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.cRUDToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.menuStrip1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -46,7 +48,8 @@ namespace William01.VISTA
             this.menuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.acercaDeToolStripMenuItem,
             this.arreglosToolStripMenuItem,
-            this.mATETICASToolStripMenuItem});
+            this.mATETICASToolStripMenuItem,
+            this.cONEXIONESBDToolStripMenuItem});
             this.menuStrip1.Location = new System.Drawing.Point(0, 0);
             this.menuStrip1.Name = "menuStrip1";
             this.menuStrip1.Size = new System.Drawing.Size(1277, 28);
@@ -74,15 +77,6 @@ namespace William01.VISTA
             this.arreglosToolStripMenuItem.Size = new System.Drawing.Size(79, 24);
             this.arreglosToolStripMenuItem.Text = "Arreglos";
             // 
-            // label1
-            // 
-            this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(1231, 9);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(46, 17);
-            this.label1.TabIndex = 3;
-            this.label1.Text = "label1";
-            // 
             // mATETICASToolStripMenuItem
             // 
             this.mATETICASToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
@@ -105,6 +99,29 @@ namespace William01.VISTA
             this.restasToolStripMenuItem.Size = new System.Drawing.Size(224, 26);
             this.restasToolStripMenuItem.Text = "Resta";
             this.restasToolStripMenuItem.Click += new System.EventHandler(this.restasToolStripMenuItem_Click);
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Location = new System.Drawing.Point(1231, 9);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(46, 17);
+            this.label1.TabIndex = 3;
+            this.label1.Text = "label1";
+            // 
+            // cONEXIONESBDToolStripMenuItem
+            // 
+            this.cONEXIONESBDToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.cRUDToolStripMenuItem});
+            this.cONEXIONESBDToolStripMenuItem.Name = "cONEXIONESBDToolStripMenuItem";
+            this.cONEXIONESBDToolStripMenuItem.Size = new System.Drawing.Size(137, 24);
+            this.cONEXIONESBDToolStripMenuItem.Text = "CONEXIONES BD";
+            // 
+            // cRUDToolStripMenuItem
+            // 
+            this.cRUDToolStripMenuItem.Name = "cRUDToolStripMenuItem";
+            this.cRUDToolStripMenuItem.Size = new System.Drawing.Size(224, 26);
+            this.cRUDToolStripMenuItem.Text = "CRUD";
             // 
             // FrmMenu
             // 
@@ -136,5 +153,7 @@ namespace William01.VISTA
         private System.Windows.Forms.ToolStripMenuItem mATETICASToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem sumasToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem restasToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem cONEXIONESBDToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem cRUDToolStripMenuItem;
     }
 }

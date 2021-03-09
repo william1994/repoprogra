@@ -82,6 +82,12 @@
     <Compile Include="VISTA\FrmAcercaDe.Designer.cs">
       <DependentUpon>FrmAcercaDe.cs</DependentUpon>
     </Compile>
+    <Compile Include="VISTA\frmFoco.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="VISTA\frmFoco.Designer.cs">
+      <DependentUpon>frmFoco.cs</DependentUpon>
+    </Compile>
     <Compile Include="VISTA\FrmLogin.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -125,6 +131,9 @@
     </Compile>
     <EmbeddedResource Include="VISTA\FrmAcercaDe.resx">
       <DependentUpon>FrmAcercaDe.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="VISTA\frmFoco.resx">
+      <DependentUpon>frmFoco.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="VISTA\FrmLogin.resx">
       <DependentUpon>FrmLogin.cs</DependentUpon>
