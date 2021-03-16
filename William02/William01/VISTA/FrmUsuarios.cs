@@ -7,6 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using William01.DAO;
 using William01.MODEL;
 
 namespace William01.VISTA
@@ -33,37 +34,40 @@ namespace William01.VISTA
         }
         void Carga() {
             dtgListaUsuarios.Rows.Clear();
-            using (programacionEntities db = new programacionEntities())
+            ClsDUserList clsDUserList = new ClsDUserList();
+            List<UserList> Lista = clsDUserList.cargarDatosUserlit();
+
+            foreach (var iteracion in Lista)
             {
-                var Lista = db.UserList.ToList();
 
-                foreach (var iteracion in Lista)
-                {
-
-                    dtgListaUsuarios.Rows.Add(iteracion.Id, iteracion.NombreUsario,iteracion.Apellido,iteracion.Edad,iteracion.Pass);
-                }
-
+                dtgListaUsuarios.Rows.Add(iteracion.Id, iteracion.NombreUsario, iteracion.Apellido, iteracion.Edad, iteracion.Pass);
             }
+
         }
         private void button1_Click(object sender, EventArgs e)
         {
-            try {
-                using (programacionEntities db = new programacionEntities()) {
+            if (txtId.Text.Equals(""))
+            {
+                ClsDUserList clsDUserList = new ClsDUserList();
+                //clsDUserList.SaveDatosUser(txtNombre.Text,txtApellido.Text,Convert.ToInt32(txtEdad.Text),txtPass.Text);
+                UserList userList = new UserList();
+                userList.NombreUsario = txtNombre.Text;
+                userList.Apellido = txtApellido.Text;
+                userList.Edad = Convert.ToInt32(txtEdad.Text);
+                userList.Pass = txtPass.Text;
+                clsDUserList.SaveDatosUser(userList);
+            }
+            else {
+                ClsDUserList clsDUserList = new ClsDUserList();
 
-                    UserList userList = new UserList();
+                UserList userList = new UserList();
+                userList.Id = Convert.ToInt32(txtId.Text);
+                userList.NombreUsario = txtNombre.Text;
+                userList.Apellido = txtApellido.Text;
+                userList.Edad = Convert.ToInt32(txtEdad.Text);
+                userList.Pass = txtPass.Text;
+                clsDUserList.updateUser(userList);
 
-                    userList.NombreUsario = txtNombre.Text;
-                    userList.Apellido = txtApellido.Text;
-                    userList.Edad = Convert.ToInt32(txtEdad.Text);
-                    userList.Pass = txtPass.Text;
-                    db.UserList.Add(userList);
-                    db.SaveChanges();
-
-                    MessageBox.Show("Save");
-                }
-            } catch (Exception EX) {
-                MessageBox.Show(EX.ToString());
-            
             }
             Carga();
             clear();
@@ -72,24 +76,8 @@ namespace William01.VISTA
 
         private void button2_Click(object sender, EventArgs e)
         {
-            try
-            {
-                using (programacionEntities db = new programacionEntities())
-                {
-                    int Eliminar = Convert.ToInt32(txtId.Text);
-                    UserList userListdddd = db.UserList.Where(x => x.Id == Eliminar).Select(x => x).FirstOrDefault();
-                    
-                    //userListdddd = db.UserList.Find(Eliminar);
-                    db.UserList.Remove(userListdddd);
-                    db.SaveChanges();
-
-                }
-            }
-            catch (Exception EX)
-            {
-                MessageBox.Show(EX.ToString());
-
-            }
+            ClsDUserList user = new ClsDUserList();
+            user.deleteUser(Convert.ToInt32(txtId.Text));
             Carga();
             clear();
         }
@@ -101,24 +89,7 @@ namespace William01.VISTA
 
         private void button3_Click(object sender, EventArgs e)
         {
-            try {
-                using (programacionEntities db = new programacionEntities())
-                {
-                    int update = Convert.ToInt32(txtId.Text);
-                    UserList user = db.UserList.Where(x => x.Id == update).Select(x => x).FirstOrDefault();
-                    //UserList userListdddd = new UserList();
-                    //userListdddd = db.UserList.Find(140);
-                    user.NombreUsario = txtNombre.Text;
-                    user.Apellido = txtApellido.Text;
-                    user.Edad = Convert.ToInt32(txtEdad.Text);
-                    user.Pass = txtPass.Text;
-                    db.SaveChanges();
-                }
-            }
-            catch (Exception ex) {
-
-                MessageBox.Show(ex.ToString());
-            }
+            
             Carga();
             clear();
         }

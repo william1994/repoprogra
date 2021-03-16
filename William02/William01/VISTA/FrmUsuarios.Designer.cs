@@ -41,7 +41,6 @@ namespace William01.VISTA
             this.label3 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
-            this.button3 = new System.Windows.Forms.Button();
             this.dtgListaUsuarios = new System.Windows.Forms.DataGridView();
             this.Column5 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Column1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -53,7 +52,7 @@ namespace William01.VISTA
             // 
             // button1
             // 
-            this.button1.Location = new System.Drawing.Point(25, 660);
+            this.button1.Location = new System.Drawing.Point(73, 660);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(221, 74);
             this.button1.TabIndex = 0;
@@ -92,7 +91,7 @@ namespace William01.VISTA
             // 
             // button2
             // 
-            this.button2.Location = new System.Drawing.Point(259, 660);
+            this.button2.Location = new System.Drawing.Point(514, 660);
             this.button2.Name = "button2";
             this.button2.Size = new System.Drawing.Size(210, 74);
             this.button2.TabIndex = 5;
@@ -102,6 +101,7 @@ namespace William01.VISTA
             // 
             // txtId
             // 
+            this.txtId.Enabled = false;
             this.txtId.Location = new System.Drawing.Point(145, 35);
             this.txtId.Name = "txtId";
             this.txtId.Size = new System.Drawing.Size(579, 22);
@@ -152,16 +152,6 @@ namespace William01.VISTA
             this.label5.TabIndex = 11;
             this.label5.Text = "Password";
             // 
-            // button3
-            // 
-            this.button3.Location = new System.Drawing.Point(510, 660);
-            this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(167, 74);
-            this.button3.TabIndex = 12;
-            this.button3.Text = "UPDATE";
-            this.button3.UseVisualStyleBackColor = true;
-            this.button3.Click += new System.EventHandler(this.button3_Click);
-            // 
             // dtgListaUsuarios
             // 
             this.dtgListaUsuarios.AllowUserToAddRows = false;
@@ -189,6 +179,7 @@ namespace William01.VISTA
             this.Column5.MinimumWidth = 6;
             this.Column5.Name = "Column5";
             this.Column5.ReadOnly = true;
+            this.Column5.Visible = false;
             // 
             // Column1
             // 
@@ -224,7 +215,6 @@ namespace William01.VISTA
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 772);
             this.Controls.Add(this.dtgListaUsuarios);
-            this.Controls.Add(this.button3);
             this.Controls.Add(this.label5);
             this.Controls.Add(this.label4);
             this.Controls.Add(this.label3);
@@ -260,7 +250,6 @@ namespace William01.VISTA
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Label label5;
-        private System.Windows.Forms.Button button3;
         private System.Windows.Forms.DataGridView dtgListaUsuarios;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column5;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column1;
