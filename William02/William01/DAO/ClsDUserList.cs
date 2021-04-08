@@ -17,7 +17,6 @@ namespace William01.DAO
             {
                  Lista = db.UserList.ToList();
 
-              
 
             }
 

@@ -26,5 +26,6 @@ namespace William01.MODEL
         }
     
         public virtual DbSet<UserList> UserList { get; set; }
+        public virtual DbSet<TypeOfUser> TypeOfUser { get; set; }
     }
 }

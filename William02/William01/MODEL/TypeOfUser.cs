@@ -12,15 +12,18 @@ namespace William01.MODEL
     using System;
     using System.Collections.Generic;
     
-    public partial class UserList
+    public partial class TypeOfUser
     {
-        public int Id { get; set; }
-        public string NombreUsario { get; set; }
-        public string Apellido { get; set; }
-        public Nullable<int> Edad { get; set; }
-        public string Pass { get; set; }
-        public Nullable<int> IdTypeOfUser { get; set; }
+        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2214:DoNotCallOverridableMethodsInConstructors")]
+        public TypeOfUser()
+        {
+            this.UserList = new HashSet<UserList>();
+        }
     
-        public virtual TypeOfUser TypeOfUser { get; set; }
+        public int IdTypeOfUser { get; set; }
+        public string TypeofUserName { get; set; }
+    
+        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
+        public virtual ICollection<UserList> UserList { get; set; }
     }
 }
