@@ -99,6 +99,12 @@
     <Compile Include="VISTA\FrmJoin.Designer.cs">
       <DependentUpon>FrmJoin.cs</DependentUpon>
     </Compile>
+    <Compile Include="VISTA\frmJoinvista.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="VISTA\frmJoinvista.Designer.cs">
+      <DependentUpon>frmJoinvista.cs</DependentUpon>
+    </Compile>
     <Compile Include="VISTA\FrmLogin.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -148,6 +154,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="VISTA\FrmJoin.resx">
       <DependentUpon>FrmJoin.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="VISTA\frmJoinvista.resx">
+      <DependentUpon>frmJoinvista.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="VISTA\FrmLogin.resx">
       <DependentUpon>FrmLogin.cs</DependentUpon>
